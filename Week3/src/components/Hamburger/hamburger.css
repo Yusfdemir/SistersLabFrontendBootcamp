@@ -1,0 +1,87 @@
+.containerHamburger{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+.üst-ekmek{
+    width: 250px;
+    height: 100px;
+    border-radius: 80px 80px 0 0;
+    background-color: orange;
+}
+
+.alt-ekmek{
+    width: 250px;
+    height: 40px;
+    border-radius: 0 0 15px 15px;
+    background-color: orange;
+    margin-top: 5px;
+}
+
+.malzemelerContainer{
+    width: 50%;
+}
+.malzemelerContainer table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.malzemelerContainer td,th{
+    border-bottom:1px solid #000;
+}
+.malzemelerContainer table thead,tbody tr td{
+    text-align: center;
+    padding: 2px;
+}
+
+.hamburgerContainer{
+    width: 50%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add-btn {
+	border: 0;
+	padding: 10px;
+	background: green;
+	color: aliceblue;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor:pointer
+}
+.remove-btn {
+	border: 0;
+	padding: 10px;
+	background: red;
+	color: aliceblue;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor:pointer
+ }
+ .remove-btn.disabled {
+	background: grey;
+	pointer-events: none;
+}
+
+.ingredient{
+    width: 275px;
+    height: 10px;
+    border-radius:5px;
+    margin-top: 5px;
+}
+.Marul{
+    background-color: green;
+}
+.Domates{
+    background-color: red;
+}
+.Köfte{
+    background-color: brown;
+}
+.Peynir{
+    background-color: yellow;
+}

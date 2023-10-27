@@ -1,0 +1,41 @@
+.container{
+    width: 300px;
+    margin: 0 auto;
+    background:#D9D7DE;
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+}
+.container button {
+	border: none;
+	outline: none;
+	margin-top: 20px;
+	color: white;
+	padding: 0.6em;
+	font-size: 1em;
+	background: slateblue;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+  
+
+.container button:hover {
+	background: darkslateblue;
+}
+
+  
+
+.container button:disabled {
+	cursor: not-allowed;
+	background: #D9D7DE;
+}
+
+  
+
+.CoinFlipper-number {
+	font-weight: bold;
+}
+
+  
+

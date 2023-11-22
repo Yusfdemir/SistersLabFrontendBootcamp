@@ -12,16 +12,28 @@ import {
   import Link from 'next/link';
   import axios from 'axios';
   import { useRouter } from 'next/router';
+import { useCallback } from 'react';
 
-const BookItem = ({book}) => {
+const BookItem = ({book,books,setBooks}) => {
     const router=useRouter()
-    const handleDelete=(id)=>{
-        axios.delete(`http://localhost:3001/books/${id}`)
-        .then(res=>{
-            alert("Book has been deleted")
-            router.push("/")
-        }).catch(err=>console.log(err))
-    }
+    const handleDelete = useCallback(
+      (id) => {
+        axios
+          .delete(`http://localhost:3001/books/${id}`)
+          .then(() => {
+            setBooks(books.filter((book) => book.id !== id));
+          })
+          .catch((error) => console.error(error));
+      },
+      [books]
+    );
+    // const handleDelete=(id)=>{
+    //     axios.delete(`http://localhost:3001/books/${id}`)
+    //     .then(res=>{
+    //         alert("Book has been deleted")
+    //         router.push("/")
+    //     }).catch(err=>console.log(err))
+    // }
   return (
     <Grid item  xs={12} sm={6} md={4}>
             <Card sx={{ maxWidth: 345 }}>

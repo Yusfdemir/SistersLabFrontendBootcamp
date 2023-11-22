@@ -19,10 +19,11 @@ export default function Home() {
     axios
       .get('http://localhost:3001/books')
       .then((response) => {
+        console.log("get isteği atıldı")
         setBooks(response.data);
       })
       .catch((error) => console.error('error :>> ', error));
-  }, [books]);
+  }, []);
 
   const handleSearch = useCallback(() => {
     axios
